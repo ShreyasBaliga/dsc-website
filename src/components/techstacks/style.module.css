@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+.card{
+    width: 280px;
+    height:380px;
+   background-color: white;
+    margin-top:50px; 
+   display: flex;
+   justify-content: space-evenly;
+   box-shadow: 0 0 15px rgba(99, 114, 130, 0.3);
+}
+
+.container{
+    padding-top:120px;
+    
+
+}
+.title{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+    line-height: 40px;
+}
+.underline{
+
+    width: 270px;
+    height: 6px;
+    border-radius: 10px;
+    background-color: rgb(9, 33, 70);
+    margin-top: 30px;
+
+}
+.cardholder{
+    margin-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    background-color: #f3f3f3;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.image{
+  
+   
+   
+}
+.android{
+   
+    height: 190px;
+
+    width:280px;
+}
+.cardtitle{
+    padding-left: 10px;
+    padding-top: 10px;
+    font-size: 18px;
+    font-family:'Open Sans',sans-serif;
+    font-weight: 800;
+    margin: 0;
+
+}
+.cardcontent{
+    font-family:'Open Sans',sans-serif;
+    padding-left: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 0;
+}
+
+.herobutton{
+    border-radius: 30px;
+    
+    margin-top: 20px;
+    width: 100px;
+    height: 30px;
+    font-family:'Open Sans',sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 10px;
+    background-color: rgb(9, 33, 70);
+    border: none;
+    
+}
+.cardholder2{
+    padding-top:100px;
+    display: flex;
+    padding-left: 100px;
+    padding-right: 100px;
+  
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@media screen and (max-width:480px){
+    .title{
+        font-size: 35px;
+    }
+    .cardholder{
+        padding-top: 50px;
+    }
+}
+@media screen and (max-width:780px){
+  
+    .cardholder{
+        padding-top: 50px;
+    }
+}

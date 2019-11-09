@@ -1,0 +1,37 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+
+.page
+{
+    margin-top:5px; 
+    background-color:#f7f7f7;
+}
+.container
+{
+    padding-top: 35px;
+   
+}
+.title
+{
+    
+    text-align: center;
+    font-family:'Open Sans',sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+}
+.underline{
+   align-self: center;
+    width: 120px;
+    height: 5px;
+    border-radius: 10px;
+    background-color: rgb(6, 50, 117);
+    margin-top: 14px;
+
+}
+.title_wrap
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom:30px; 
+}

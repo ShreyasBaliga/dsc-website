@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800");
+.Menu {
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 78px;
+  margin: auto;
+  box-shadow: 0.5px 0px 5px #888888;
+  flex-direction: row;
+  overflow: hidden;
+}
+.ullist {
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Varela Round", sans-serif;
+
+  list-style-type: none;
+  font-weight: 400;
+  color: rgb(0, 0, 0, 0.7);
+  font-size: 15px;
+  width: 100%;
+}
+.links {
+  margin-right: 40px;
+  padding: 10px;
+  text-decoration: none;
+  text-decoration-color: none;
+  color: rgb(0, 0, 0, 0.7);
+}
+.activelink {
+  color: rgb(9, 33, 70);
+  width: 30px;
+  padding-bottom: 23px;
+  border-bottom: solid 5px;
+}
+
+.list {
+  padding-right: 100px;
+  width: 100%;
+}
+.dsc_logo {
+}
+.titlewrap {
+  padding-left: 70px;
+  display: flex;
+  margin: 0px;
+}
+
+.image {
+  width: 40px;
+  height: 50px;
+  min-width: 40px;
+  min-height: 50px;
+  max-width: 60px;
+  max-height: 50px;
+  justify-content: space-evenly;
+  font-weight: 700;
+}
+.title {
+  padding-left: 12px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  margin: 0;
+}
+.herobutton {
+  font-family: "Varela Round", sans-serif;
+  font-size: 13px;
+  font-weight: 200;
+  text-decoration: none;
+  color: white;
+  margin-top: 5px;
+}
+.button_div {
+  margin-top: -5px;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(9, 33, 70);
+  box-align: center;
+  border: 2px;
+  height: 35px;
+  border-radius: 20px;
+  width: 100px;
+}
+.button_div:hover {
+  background-position: right center;
+}
+@media screen and (max-width: 787px) {
+  .Menu {
+    flex-direction: column;
+    height: 120px;
+  }
+  .list {
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 10px;
+    padding-right: 0px;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+  li {
+    padding-right: 0px;
+  }
+  .activelink {
+    padding-bottom: 13px;
+  }
+  .links {
+    margin: 0;
+  }
+}
+@media screen and (min-width: 787px) {
+  .ullist {
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 1007px) {
+  .titlewrap {
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width: 823px) {
+  .titlewrap {
+    padding-left: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ullist {
+    font-size: 16px;
+    font-weight: 400;
+  }
+  .list {
+    width: 100%;
+  }
+}

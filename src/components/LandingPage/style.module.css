@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+body{
+    margin: auto;
+
+}
+.container{
+   display: flex;
+   margin-left: 100px;
+   margin-right: 100px;
+   justify-content: space-evenly;
+}
+body{
+    overflow: hidden;
+}
+
+.content{
+    padding-left: 60px;
+    padding-top: 120px;
+    font-family: 'Varela Round', sans-serif;
+
+    font-weight: 700;
+    font-size: 25px;
+    width: 100%;
+    
+    
+   
+}
+p{
+    margin: 0px;
+}
+.title{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    padding-top: 40px;
+  
+}
+
+
+.image{
+   
+    width: 350px;
+    height: 50px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    min-width: 300px;
+    min-height: 50px;
+}
+
+
+.solid{
+    width: 550px;
+    height: 480px;
+    position: relative;
+    background-color:rgba(66, 133, 244, 0.06);
+    z-index: -1;
+    top:60px;
+    right: 150px;
+ 
+    
+}
+
+.sahyadri{
+    margin-top:10px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    color: rgba(10, 54, 124, 0.6);
+  
+}
+.Landingpagecontent{
+    margin-top: 30px;
+    font-family:'Open Sans',sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    padding-right: 50px;
+    width: 80%;
+    color: rgb(0, 0, 0,0.8)
+}
+
+.DSCS{
+    color: rgba(6, 28, 75, 0.8);
+}
+.hero2{
+    position: relative;
+    left:180px;
+    bottom: 40px;
+    width: 500px;
+   
+}
+.hero1{
+    position: relative;
+    width: 290px;
+    left: 300px;
+    top: 60px;
+  
+}
+
+.herobutton{
+     border-radius: 30px;
+     margin-top: 30px;
+     padding: 5px;
+     width: 180px;
+     height: 40px;
+     font-family:'Open Sans',sans-serif;
+     font-weight: 700;
+     color: white;
+     font-size: 15px;
+     background-color: rgb(9, 33, 70);
+     border: none;
+}
+.landingfooter{
+    
+padding-top: 10px;
+   
+}
+.Contact{
+    float: right;
+}
+
+
+@media screen and (max-width: 1280px) {
+
+    .content
+   {
+       padding-left: 50px;
+      padding-top: 90px;
+   }
+   .container
+   {
+       margin-right: 40px;
+       margin-left:40px; 
+   }
+   
+}
+
+@media screen and (max-width: 768px) {
+
+
+    .title
+    {
+        font-size: 40px;
+        line-height: 50px;
+    }
+    .content
+    {
+        padding-top: 50px;
+    }
+    .Landingpagecontent
+    {
+        width: 100%;
+        padding-right: 0px;
+    }
+   
+}
+@media screen and (max-width: 761px) {
+
+    .container
+    {
+        flex-direction: column;
+    }
+  
+   .content
+   {
+       padding-left: 0px;
+       padding-top: 0px;
+   }
+   .title
+   {
+       font-size: 30px;
+       line-height: 50px;
+   }
+   .sahyadri
+   {
+       font-size: 30px;
+      margin-top: 0px;
+   }
+   .Landingpagecontent
+   {
+       margin-top: 30px;
+   }
+}
+/* @media screen and (max-width:1920px)
+{
+    .container
+   {
+       margin-right: 160px;
+       margin-left:160px; 
+   }
+} */
+

@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+
+.title{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: left;
+ 
+
+}
+.image
+{   
+    order: 1;
+    width: 100%;
+    margin-top:50px; 
+    max-width: 700px;
+  
+   
+}
+
+.dsc{
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    text-align: left;
+    padding-left: 20px;
+    color: rgba(10, 54, 124, 0.6);
+ 
+   
+
+}
+.container
+{
+    margin-right:100px;
+    margin-left:100px;  
+}
+.content{
+    font-family: 'Varela Round', sans-serif;
+    padding-top: 40px;
+   
+    font-size: 17px;
+    color: rgb(0, 0, 0,0.8)
+}
+
+.wrapper{
+    display: flex;
+    justify-content: center;
+   
+}
+.aboutwrap{
+    order:2; 
+    width: 90%;
+  margin-top: 110px;  
+  margin-left: 70px;
+    
+}
+.titlewrap{
+    display: flex;
+    width: 100%;
+   
+}
+.aboutbutton{
+    border-radius: 30px;
+    padding: 5px;
+    width: 180px;
+    height: 40px;
+    margin-top: 20px;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 700;
+    color: white;
+    font-size: 15px;
+    background-color: rgb(9, 33, 70);
+    border: none;
+}
+.buttonspace{
+    padding-top: 20px;
+}
+.underline{
+
+    width: 100px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgb(9, 33, 70);
+    margin-top: 30px;
+   
+}
+
+.about
+{
+    width: 100%;
+    max-height: 420px;
+    max-width: 700px;
+    min-width: 260px;
+    min-height: 240px;
+}
+
+@media screen and (max-width:1280px)
+{
+
+   
+}  
+@media screen and (max-width:1024px){
+   
+    
+}
+@media screen and (max-width: 768px) {
+    .title
+    {
+        font-size: 35px;
+    }
+    .dsc
+    {
+        font-size: 35px;
+    }
+    .wrapper
+    {
+        flex-direction: column;
+    }
+    .aboutwrap
+    {
+        order: 1;
+        margin-left: 0px;
+    }
+    .container
+    {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+    .image
+    {
+        order: 2;
+    }
+  
+   
+}
+
+@media screen and (max-width:480px){
+    .container
+    {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+}
