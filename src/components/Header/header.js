@@ -108,11 +108,10 @@ class Header extends React.Component {
                   <div className={style.button_div}>
                     <Link
                       className={style.herobutton}
-                      activeClassName={style.activelink}
                       onClick={this.handleLogout}
                       to="/"
                     >
-                      LogOut
+                      Log Out
                     </Link>
                   </div>
                 </ul>
@@ -161,11 +160,7 @@ class Header extends React.Component {
                   </Link>
                 </div>
                 <div className={style.button_div}>
-                  <Link
-                    className={style.herobutton}
-                    activeClassName={style.activelink}
-                    to="/login/"
-                  >
+                  <Link className={style.herobutton} to="/login/">
                     LogIn
                   </Link>
                 </div>

@@ -3,24 +3,10 @@ import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
-import Link from "@material-ui/core/Link";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import firebase from "./firebase";
-
-function Copyright() {
-  return (
-    <Typography variant="body2" color="textSecondary" align="center">
-      {"Copyright © "}
-      <Link color="inherit" href="https://material-ui.com/">
-        Your Website
-      </Link>{" "}
-      {new Date().getFullYear()}
-      {"."}
-    </Typography>
-  );
-}
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -44,8 +30,6 @@ class SignIn extends React.Component {
           .then(() => (window.location = "/"));
       })
       .catch(function(error) {
-        var errorCode = error.code;
-        var errorMessage = error.message;
         alert("Email or Password wrong.Please try again");
       });
   }
