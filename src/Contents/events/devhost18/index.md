@@ -1,7 +1,7 @@
 ---
 slug: /events/devhost18
 name: devhost:18
-date: 2019-11-15
+date: 2019-12-20
 location: Seminar Hall
 cover: "./cover.jpg"
 caption: devhost:18 was a two day event which took place on 4th and 5th May 2018 and had speakers from various organizations.

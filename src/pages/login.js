@@ -8,12 +8,15 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import firebase from "./firebase";
 
+import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
+
 class SignIn extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       email: "",
-      password: ""
+      password: "",
+      email_error: false
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleEmail = this.handleEmail.bind(this);
@@ -33,9 +36,9 @@ class SignIn extends React.Component {
         alert("Email or Password wrong.Please try again");
       });
   }
-  handleEmail(e) {
+  handleEmail(event) {
     this.setState({
-      email: e.target.value
+      email: event.target.value
     });
   }
   handlePassword(e) {
@@ -66,41 +69,72 @@ class SignIn extends React.Component {
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
-
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            id="email"
-            label="Email Address"
-            autoComplete="email"
-            autoFocus
-            value={this.email}
-            onChange={this.handleEmail}
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            label="Password"
-            type="password"
-            id="password"
-            autoComplete="current-password"
-            value={this.state.password}
-            onChange={this.handlePassword}
-          />
-
-          <Button
-            style={{ backgroundColor: "rgb(6, 28, 75)" }}
-            fullWidth
-            variant="contained"
-            color="primary"
-            onClick={this.handleClick}
+          <ValidatorForm
+            ref="form"
+            onSubmit={this.handleClick}
+            onError={errors => console.log(errors)}
           >
-            Sign In
-          </Button>
+            <TextValidator
+              fullWidth
+              autoFocus
+              variant="outlined"
+              margin="normal"
+              label="Email"
+              onChange={this.handleEmail}
+              name="email"
+              value={this.state.email}
+              validators={["required", "isEmail"]}
+              errorMessages={["This field is required", "Email is not valid"]}
+            />
+            <TextValidator
+              fullWidth
+              autoFocus
+              variant="outlined"
+              margin="normal"
+              label="Password"
+              onChange={this.handlePassword}
+              name="password"
+              type="password"
+              validators={["required"]}
+              errorMessages={["This field is required"]}
+              value={this.state.password}
+            />
+            {/* <TextField
+              error={this.state.email_error}
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              label="Email Address"
+              autoComplete="email"
+              autoFocus
+              value={this.email}
+              onChange={this.handleEmail}
+              errorText="Invalid Email"
+            /> */}
+            {/* <TextField
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+              value={this.state.password}
+              onChange={this.handlePassword}
+            /> */}
+
+            <Button
+              type="submit"
+              style={{ backgroundColor: "rgb(6, 28, 75)" }}
+              fullWidth
+              variant="contained"
+              color="primary"
+            >
+              Sign In
+            </Button>
+          </ValidatorForm>
         </div>
       </Container>
     );

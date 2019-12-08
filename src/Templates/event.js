@@ -47,7 +47,7 @@ class Template extends React.Component {
     let today = new Date();
     today.setHours(0, 0, 0, 0);
 
-    if (today < eventDate._d) {
+    if (today < eventDate._d && !this.state.isLoggedIn) {
       return (
         <div align="center" style={{ margin: "20px" }}>
           <div>
@@ -103,18 +103,6 @@ class Template extends React.Component {
               </div>
             </Modal>
           </div>
-        </div>
-      );
-    } else if (today < week) {
-      return (
-        <div align="center" style={{ margin: "20px" }}>
-          <Button
-            style={{ backgroundColor: "rgb(6, 28, 75)" }}
-            variant="contained"
-            color="primary"
-          >
-            Feedback
-          </Button>
         </div>
       );
     }

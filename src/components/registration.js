@@ -10,7 +10,7 @@ import InputLabel from "@material-ui/core/InputLabel";
 
 import FormControl from "@material-ui/core/FormControl";
 import firebase from "../pages/firebase";
-
+import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 class Register extends React.Component {
   constructor(props) {
     super(props);
@@ -75,136 +75,155 @@ class Register extends React.Component {
           <Typography component="h1" variant="h5">
             Registration
           </Typography>
-
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            label="Email Address"
-            autoFocus
-            value={this.email}
-            onChange={function(e) {
-              this.setState({
-                email: e.target.value
-              });
-            }.bind(this)}
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            label="Name"
-            value={this.state.name}
-            onChange={function(e) {
-              this.setState({
-                name: e.target.value
-              });
-            }.bind(this)}
-          />
-          <TextField
-            variant="outlined"
-            margin="normal"
-            required
-            fullWidth
-            label="USN"
-            value={this.state.usn}
-            onChange={function(e) {
-              this.setState({
-                usn: e.target.value
-              });
-            }.bind(this)}
-          />
-
-          <FormControl
-            fullWidth
-            variant="outlined"
-            style={{
-              margin: 20,
-              minWidth: 120
-            }}
+          <ValidatorForm
+            ref="form"
+            onSubmit={this.handleClick}
+            onError={errors => console.log(errors)}
           >
-            <InputLabel id="demo-simple-select-outlined-label">Year</InputLabel>
-            <Select
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
-              value={this.state.year}
-              onChange={function(e) {
-                this.setState({
-                  year: e.target.value
-                });
-              }.bind(this)}
-            >
-              <MenuItem value={1}>First</MenuItem>
-              <MenuItem value={2}>Second</MenuItem>
-              <MenuItem value={3}>Third</MenuItem>
-              <MenuItem value={4}>Fourth</MenuItem>
-            </Select>
-          </FormControl>
-          <FormControl
-            fullWidth
-            variant="outlined"
-            style={{
-              margin: 20,
-              minWidth: 120
-            }}
-          >
-            <InputLabel id="demo-simple-select-outlined-label">
-              Branch
-            </InputLabel>
-            <Select
+            <TextValidator
               fullWidth
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
-              lable="Branch"
-              value={this.state.branch}
+              autoFocus
+              variant="outlined"
+              margin="normal"
+              label="Email"
               onChange={function(e) {
                 this.setState({
-                  branch: e.target.value
+                  email: e.target.value
                 });
               }.bind(this)}
-            >
-              <MenuItem value={"CSE"}>CSE</MenuItem>
-              <MenuItem value={"ISE"}>ISE</MenuItem>
-              <MenuItem value={"ECE"}>ECE</MenuItem>
-              <MenuItem value={"ME"}>ME</MenuItem>
-              <MenuItem value={"CV"}>CV</MenuItem>
-            </Select>
-          </FormControl>
-          <FormControl
-            fullWidth
-            variant="outlined"
-            style={{
-              margin: 20,
-              minWidth: 120
-            }}
-          >
-            <InputLabel id="demo-simple-select-outlined-label">Sex</InputLabel>
-            <Select
+              name="email"
+              value={this.state.email}
+              validators={["required", "isEmail"]}
+              errorMessages={["This field is required", "Email is not valid"]}
+            />
+
+            <TextValidator
+              variant="outlined"
+              margin="normal"
+              required
               fullWidth
-              labelId="demo-simple-select-outlined-label"
-              id="demo-simple-select-outlined"
-              value={this.state.sex}
+              label="Name"
+              validators={["required"]}
+              errorMessages={["This field is required"]}
+              value={this.state.name}
               onChange={function(e) {
                 this.setState({
-                  sex: e.target.value
+                  name: e.target.value
                 });
               }.bind(this)}
+            />
+            <TextValidator
+              variant="outlined"
+              margin="normal"
+              required
+              fullWidth
+              label="USN"
+              validators={["required"]}
+              errorMessages={["This field is required"]}
+              value={this.state.usn}
+              onChange={function(e) {
+                this.setState({
+                  usn: e.target.value
+                });
+              }.bind(this)}
+            />
+
+            <FormControl
+              fullWidth
+              variant="outlined"
+              style={{
+                marginTop: 20,
+                marginBottom: 20,
+                minWidth: 120
+              }}
             >
-              <MenuItem value={"M"}>Male</MenuItem>
-              <MenuItem value={"F"}>Female</MenuItem>
-            </Select>
-          </FormControl>
-          <Button
-            style={{ backgroundColor: "rgb(6, 28, 75)" }}
-            fullWidth
-            variant="contained"
-            color="primary"
-            onClick={this.handleClick}
-          >
-            Register
-          </Button>
+              <InputLabel id="demo-simple-select-outlined-label">
+                Year
+              </InputLabel>
+              <Select
+                labelId="demo-simple-select-outlined-label"
+                id="demo-simple-select-outlined"
+                value={this.state.year}
+                onChange={function(e) {
+                  this.setState({
+                    year: e.target.value
+                  });
+                }.bind(this)}
+              >
+                <MenuItem value={1}>First</MenuItem>
+                <MenuItem value={2}>Second</MenuItem>
+                <MenuItem value={3}>Third</MenuItem>
+                <MenuItem value={4}>Fourth</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl
+              fullWidth
+              variant="outlined"
+              style={{
+                marginTop: 20,
+                marginBottom: 20,
+                minWidth: 120
+              }}
+            >
+              <InputLabel id="demo-simple-select-outlined-label">
+                Branch
+              </InputLabel>
+              <Select
+                fullWidth
+                labelId="demo-simple-select-outlined-label"
+                id="demo-simple-select-outlined"
+                lable="Branch"
+                value={this.state.branch}
+                onChange={function(e) {
+                  this.setState({
+                    branch: e.target.value
+                  });
+                }.bind(this)}
+              >
+                <MenuItem value={"CSE"}>CSE</MenuItem>
+                <MenuItem value={"ISE"}>ISE</MenuItem>
+                <MenuItem value={"ECE"}>ECE</MenuItem>
+                <MenuItem value={"ME"}>ME</MenuItem>
+                <MenuItem value={"CV"}>CV</MenuItem>
+              </Select>
+            </FormControl>
+            <FormControl
+              fullWidth
+              variant="outlined"
+              style={{
+                marginTop: 20,
+                marginBottom: 20,
+                minWidth: 120
+              }}
+            >
+              <InputLabel id="demo-simple-select-outlined-label">
+                Sex
+              </InputLabel>
+              <Select
+                fullWidth
+                labelId="demo-simple-select-outlined-label"
+                id="demo-simple-select-outlined"
+                value={this.state.sex}
+                onChange={function(e) {
+                  this.setState({
+                    sex: e.target.value
+                  });
+                }.bind(this)}
+              >
+                <MenuItem value={"M"}>Male</MenuItem>
+                <MenuItem value={"F"}>Female</MenuItem>
+              </Select>
+            </FormControl>
+            <Button
+              style={{ backgroundColor: "rgb(6, 28, 75)" }}
+              fullWidth
+              variant="contained"
+              color="primary"
+              type="submit"
+            >
+              Register
+            </Button>
+          </ValidatorForm>
         </div>
       </Container>
     );
