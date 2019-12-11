@@ -88,7 +88,6 @@ class SignIn extends React.Component {
             />
             <TextValidator
               fullWidth
-              autoFocus
               variant="outlined"
               margin="normal"
               label="Password"

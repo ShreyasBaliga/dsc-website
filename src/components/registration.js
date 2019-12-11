@@ -103,8 +103,8 @@ class Register extends React.Component {
               required
               fullWidth
               label="Name"
-              validators={["required"]}
-              errorMessages={["This field is required"]}
+              validators={["required", 'matchRegexp:^[a-zA-Z]+$']}
+              errorMessages={["This field is required", "Only alphabets are allowed"]}
               value={this.state.name}
               onChange={function(e) {
                 this.setState({

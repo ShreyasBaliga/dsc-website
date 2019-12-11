@@ -23,17 +23,21 @@ function MemberCard(props) {
             <p className={style.member_name}>{props.full_name}</p>
             <p className={style.designation}>{props.designation}</p>
             <div className={style.links}>
-              <img alt="contact" classname={style.contact} src={Web}></img>
-              <img alt="git" classname={style.linked_images} src={Git}></img>
+              <img alt="contact" classname={style.contact} src={Web} width="20px" height="20px"></img>
+              <img alt="git" classname={style.linked_images} src={Git} width="20px" height="20px"></img>
               <img
                 alt="linkedImage"
                 classname={style.linked_images}
                 src={Linked}
+                width="20px"
+                height="20px"
               ></img>
               <img
                 alt="mailImage"
                 classname={style.linked_images}
                 src={mail}
+                width="20px"
+                height="20px"
               ></img>
             </div>
           </div>

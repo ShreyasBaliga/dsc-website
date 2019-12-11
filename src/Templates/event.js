@@ -177,7 +177,7 @@ class Template extends React.Component {
       "&apikey=c4134911-32a6-43a8-91ef-8e85d07e6fb2";
     if (this.state.isLoggedIn)
       return (
-        <a href={link}>
+        <a href={link} >
           <Fab
             style={{
               backgroundColor: "rgb(6, 28, 75)",
